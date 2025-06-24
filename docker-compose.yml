@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - _x6tu49LlIVciypyBvZxl6dXLnAVcyKfVY3ifP0bw6pJ=${WATSONX_API_KEY} # Use a meaningful env var name
+      - dd0677da-e94c-4810-b931-686e82428b16=${WATSONX_PROJECT_ID}
+      - https://us-south.ml.cloud.ibm.com=${WATSONX_URL}
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
