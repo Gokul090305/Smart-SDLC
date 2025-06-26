@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_KEY = os.getenv("_x6tu49LlIVciypyBvZxl6dXLnAVcyKfVY3ifP0bw6pJ")
+API_KEY = os.getenv("4SP6wd9s3g9X8xTCmLFeS4wAK3B7IkGSdnHAVUv-zZBV")
 PROJECT_ID = os.getenv("dd0677da-e94c-4810-b931-686e82428b16")
 URL = os.getenv("https://us-south.ml.cloud.ibm.com")
 
